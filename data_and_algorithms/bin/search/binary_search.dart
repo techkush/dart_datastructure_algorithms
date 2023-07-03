@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 /// Binary Search is defined as a searching algorithm used in a sorted array by
 /// repeatedly dividing the search interval in half. The idea of binary search
 /// is to use the information that the array is sorted and reduce the time
@@ -71,5 +73,74 @@ class BinarySearch {
     } else {
       print("Target value $target not found in the list.");
     }
+  }
+}
+
+class MetaBinarySearch {
+  static T? metaBinarySearch<T extends Comparable>(
+      List<List<T>> sortedLists, T target) {
+    int low = 0;
+    int high = sortedLists.length - 1;
+
+    while (low <= high) {
+      int mid = low + ((high - low) ~/ 2);
+      List<T> midList = sortedLists[mid];
+
+      if (midList.isEmpty) {
+        low = mid + 1;
+        continue;
+      }
+
+      T midValue = midList.first;
+
+      if (midValue == target) {
+        return midValue; // Found the target value
+      } else if (midValue.compareTo(target) < 0) {
+        low = mid + 1; // Target is in the right half
+      } else {
+        high = mid - 1; // Target is in the left half
+      }
+    }
+
+    return null; // Target value not found
+  }
+
+  static int reWrieMetaBinarySearch(List<int> sortedLists, int target) {
+    int n = sortedLists.length;
+    int lg = ((math.log(n - 1) / math.log(2)) + 1).truncate();
+
+    int pos = 0;
+    for (int i = lg; i >= 0; i--) {
+      print(i);
+      if (sortedLists[pos] == target) {
+        return pos;
+      }
+      int newPos = pos | (1 << i);
+      if (newPos < n && sortedLists[newPos] <= target) {
+        pos = newPos;
+      }
+    }
+    return sortedLists[pos] == target ? pos : -1;
+  }
+
+  static runMetaBinarySearch() {
+    List<int> numbers = [1, 3, 5, 7, 9, 11, 13, 15];
+    reWrieMetaBinarySearch(numbers, 13);
+
+    // List<List<int>> sortedLists = [
+    //   [1, 3, 5, 7, 9],
+    //   [11, 13, 15],
+    //   [20, 22, 24, 26],
+    //   [30, 32]
+    // ];
+    // int target = 11;
+
+    // int? result = metaBinarySearch(sortedLists, target);
+
+    // if (result != null) {
+    //   print("Target value $target found in the list.");
+    // } else {
+    //   print("Target value $target not found in the list.");
+    // }
   }
 }

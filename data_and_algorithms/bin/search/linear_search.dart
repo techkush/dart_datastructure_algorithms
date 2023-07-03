@@ -6,6 +6,8 @@
 /// Worst Case Time Complexity: O(n)
 /// Auxiliary Space: O(1)
 /// https://www.geeksforgeeks.org/linear-search/
+/// https://www.geeksforgeeks.org/binary-search/
+///
 ///
 
 class LinearSearch {

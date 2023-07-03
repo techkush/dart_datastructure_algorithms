@@ -9,5 +9,16 @@ void main(List<String> arguments) {
   // SentinelLinearSearch.runLinearSearch();
   // MyLinearSearch.runLinearSearch();
 
-  BinarySearch.runBinarySearch();
+  // BinarySearch.runBinarySearch();
+  MetaBinarySearch.runMetaBinarySearch();
+
+  // MetaBinarySearch.reWrieMetaBinarySearch([
+  //   12,
+  //   13,
+  //   23,
+  //   45,
+  //   56,
+  //   67,
+  //   78,
+  // ], 23);
 }
