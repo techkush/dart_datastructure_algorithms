@@ -76,6 +76,7 @@ class BinarySearch {
   }
 }
 
+// https://www.quora.com/What-is-meta-binary-search
 class MetaBinarySearch {
   static T? metaBinarySearch<T extends Comparable>(
       List<List<T>> sortedLists, T target) {

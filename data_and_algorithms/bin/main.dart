@@ -1,5 +1,6 @@
 import 'search/binary_search.dart';
 import 'search/linear_search.dart';
+import 'search/ternary_search.dart';
 
 void main(List<String> arguments) {
   // List<int> array = [10, 50, 30, 70, 80, 20, 90, 40];
@@ -10,15 +11,7 @@ void main(List<String> arguments) {
   // MyLinearSearch.runLinearSearch();
 
   // BinarySearch.runBinarySearch();
-  MetaBinarySearch.runMetaBinarySearch();
+  // MetaBinarySearch.runMetaBinarySearch();
 
-  // MetaBinarySearch.reWrieMetaBinarySearch([
-  //   12,
-  //   13,
-  //   23,
-  //   45,
-  //   56,
-  //   67,
-  //   78,
-  // ], 23);
+  TernarySearch.runTernarySearch();
 }
