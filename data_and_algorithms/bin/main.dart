@@ -1,4 +1,5 @@
 import 'search/binary_search.dart';
+import 'search/exponential_search.dart';
 import 'search/interpolation_search.dart';
 import 'search/jump_search.dart';
 import 'search/linear_search.dart';
@@ -18,5 +19,6 @@ void main(List<String> arguments) {
   // TernarySearch.runTernarySearch();
   // JumpSearch.runTernarySearch();
 
-  InterpolationSearch.runInterpolationSearch();
+  // InterpolationSearch.runInterpolationSearch();
+  ExponentialSearch.runExpnentialSearch();
 }
