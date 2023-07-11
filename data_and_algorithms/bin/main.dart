@@ -1,5 +1,7 @@
+import 'interview_questions/uber/valid_anagram.dart';
 import 'search/binary_search.dart';
 import 'search/exponential_search.dart';
+import 'search/fibonacci_search.dart';
 import 'search/interpolation_search.dart';
 import 'search/jump_search.dart';
 import 'search/linear_search.dart';
@@ -20,5 +22,9 @@ void main(List<String> arguments) {
   // JumpSearch.runTernarySearch();
 
   // InterpolationSearch.runInterpolationSearch();
-  ExponentialSearch.runExpnentialSearch();
+  // ExponentialSearch.runExpnentialSearch();
+
+  // FibonacciSearch.runFibonacciSearch();
+
+  ValidAnagram.runValidAnagram();
 }
