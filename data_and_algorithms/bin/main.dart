@@ -1,5 +1,6 @@
 import 'interview_questions/maximum_subarray.dart';
 import 'interview_questions/two_sum.dart';
+import 'interview_questions/two_sum_sorted.dart';
 import 'interview_questions/valid_anagram.dart';
 import 'search/binary_search.dart';
 import 'search/exponential_search.dart';
@@ -10,7 +11,9 @@ import 'search/linear_search.dart';
 import 'search/ternary_search.dart';
 
 void main(List<String> arguments) {
-  MaximumSubArray.maximumSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
+  TwoSumSorted.twoSumSorted([2, 7, 11, 15], 9);
+
+  // MaximumSubArray.maximumSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
   // TwoSumAlgorithm.twoSumAlgorithm([1, 2, 4, 5, 2, 34], 3);
 
   // List<int> array = [10, 50, 30, 70, 80, 20, 90, 40];

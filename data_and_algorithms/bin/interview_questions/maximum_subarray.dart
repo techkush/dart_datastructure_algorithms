@@ -25,16 +25,13 @@ class MaximumSubArray {
   static maximumSubArray(List<int> array) {
     int maxSub = array[0];
     int currentSum = 0;
-    List<int> subArray = [];
     for (int num in array) {
       if (currentSum < 0) {
         currentSum = 0;
       }
       currentSum += num;
-      subArray.add(num);
       maxSub = maxSub > currentSum ? maxSub : currentSum;
     }
     print(maxSub);
-    print(subArray);
   }
 }
